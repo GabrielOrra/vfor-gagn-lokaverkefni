@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="css/create_comic.css">
+</head>
+<body>
+    <h1>Create comic</h1>
+  <form action="/create_comic" method="POST" >
+    <label>Comic INSERT YAYYY!!:</label> <br>
+    <label for="name">COMIC TITLE</label>
+    <input type="text" id="name" name="name" required> <br>
+
+    <label for="isbn">isbn NUMBER</label>
+    <input type="number" id="isbn" name="isbn"> <br>
+
+    <label for="issue_number">issue number shenanigans</label> 
+    <input type="number" id="issue_number" name="issue_number"> <br>
+
+    <label for="summary">summary</label> 
+    <input type="text" id="summary" name="summary"> <br>
+
+    <label for="page_count">page_count</label>
+    <input type="number" id="page_count" name="page_count"> <br>
+
+    <label for="publication_date">publication date</label>
+    <input type="date" id="publication_date" name="publication_date"> <br>
+
+    <label for="image">image</label>
+    <input type="text" id="image" name="image"> <br>
+
+    <label for="publisher_id">publisher id+</label>
+    <input type="number" id="publisher_id" name="publisher_id"> <br><br>
+
+
+    <label for="genres">SELECT GENRES:</label> <br>
+    <select name="genres" id="genres" title="genres" multiple>
+        <% for (let i = 0; i < genres.length; i++) { %>
+            <option value="<%= genres[i].id %>"><%= genres[i].name %></option>
+        <% } %>
+    </select> <br><br>
+
+
+    <label for="series">SELECT series:</label> <br>
+    <select name="series" id="series" multiple>
+        <% for (let i = 0; i < series.length; i++) { %>
+            <option value="<%= series[i].id %>"><%= series[i].name %></option>
+        <% } %>
+    </select> <br><br>
+    
+
+    <label for="characters">SELECT characeters:</label> <br>
+    <select name="characters" id="characters" multiple>
+        <% for (let i = 0; i < characters.length; i++) { %>
+            <option value="<%= characters[i].id %>"><%= characters[i].name %></option>
+        <% } %>
+    </select> <br><br>
+    
+    <label for="series">xX_SELECTxAUTHOR_Xx:</label> <br>
+    <div name="authorDiv" id="authorDiv">
+        <select name="author" id="author" multiple>
+            <% for (let i = 0; i < people.length; i++) { %>
+                <option value="<%= people[i].id %>"><%= people[i].name %></option>
+            <% } %>
+        </select>
+    </div>
+
+    <br>
+
+    <label for="series">SELECT artist:</label> <br>
+    <div name="artistDiv" id="artistDiv">
+        <select name="artist" id="artist" multiple>
+            <% for (let i = 0; i < people.length; i++) { %>
+                <option value="<%= people[i].id %>"><%= people[i].name %></option>
+            <% } %>
+        </select>
+    </div>
+
+    <br>
+
+    <button type="submit">Create comic</button>
+  </form>
+</body>
+</html>

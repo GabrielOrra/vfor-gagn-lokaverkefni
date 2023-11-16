@@ -1,0 +1,78 @@
+body{
+    background-image: url(/images/DOOM!!.png);
+}
+
+/* Style the navbar */
+#navbar {
+    overflow: hidden;
+    background-color: darkred;
+  }
+  
+  /* Navbar links */
+  #navbarText {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    font-size: 20pt ;
+    padding: 14px;
+    text-decoration: none;
+  }
+  #navbar a:hover {
+    background-color: maroon;
+  }
+  
+  /* Page content */
+  .content {
+    padding: 16px;
+  }
+  
+  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content {
+    padding-top: 60px;
+  }
+  #logo {
+    height: 80px;
+    width: auto;
+    float: left;
+  }
+  #logo:hover {
+    background-color: maroon;
+  }
+  #logoA {
+    padding: 0px;
+  }
+  #fronttext{
+    padding-left: 300px;
+    width: 800px;
+}
+
+
+#flamesofdoom {
+    height: 700px;
+    width: 400px;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+}
+
+#flamesofdoom2 {
+    height: 700px;
+    width: 400px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+#fronttext{
+    padding-left: 350px;
+    width: 800px;
+}
+
