@@ -11,5 +11,5 @@ DROP TABLE genres;
 
 DROP TABLE comic_genre;
 DROP TABLE comic_series;
-DROP TABLE series_character;
+DROP TABLE comic_character;
 DROP TABLE comic_person_role;
