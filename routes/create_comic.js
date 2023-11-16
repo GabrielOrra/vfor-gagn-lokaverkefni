@@ -25,14 +25,15 @@ router.get('/', (req, res) => {
   const characters = read_characters(dbFile);
   const people = read_people(dbFile);
   const roles = read_roles(dbFile);
-  res.render('create_comic', { title: '', genres, series, characters, people, roles});
+  const title = "CREATE COMICS"
+  res.render('create_comic', { title, genres, series, characters, people, roles});
 });
 
 router.post('/', (req, res) => {
   console.log(req.body);
   const lastId = create_comic(dbFile, req.body.name, req.body.isbn, req.body.issue_number,
                               req.body.summary, req.body.page_count, req.body.publication_date,
-                              req.body.image, req.body.publisher_id
+                              req.body.image, req.body.price, req.body.publisher_id
                               );
   
   if (req.body.genres != null){

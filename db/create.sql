@@ -59,6 +59,7 @@ CREATE TABLE comics (
   page_count INTEGER,
   publication_date DATE,
   image VARCHAR(255),
+  price INTEGER,
   publisher_id INTEGER NOT NULL,
   FOREIGN KEY (publisher_id) REFERENCES publishers(id)
 );
