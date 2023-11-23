@@ -72,6 +72,13 @@ CREATE TABLE comic_character (
   FOREIGN KEY (comic_id) REFERENCES comics(id)
 );
 
+CREATE TABLE cart (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  user_id INTEGER,
+  comic_id INTEGER,
+  FOREIGN KEY (user_id) REFERENCES users(id),
+  FOREIGN KEY (comic_id) REFERENCES comics(id)
+);
 
 
 CREATE TABLE genres (

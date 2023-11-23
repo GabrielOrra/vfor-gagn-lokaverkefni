@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+</head>
+<body>
+  <h1>User cart: <%= cartCount.count  %></h1>
+  <% for (let comic of comics) { %>
+    <h1><%= comic.name %></h1>
+    <p><%= comic.description %></p>
+    <p><%= comic.price %></p>
+    <p><%= comic.image %></p>
+    <br>
+    <form action="/comics" method="post">
+      <input type="hidden" name="comic" value="<%= comic.id %>">
+      <input type="submit" value="AddToCart">
+    </form>
+    <br>
+    <form action="/delete_from_cart" method="post">
+      <input type="hidden" name="comic" value="<%= comic.id %>">
+      <input type="submit" value="delete_from_cart">
+    </form>
+  <% } %>
+</body>
+</html>

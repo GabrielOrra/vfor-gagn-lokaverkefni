@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/store_image.css">
 </head>
 <body>
     <div id="navbar">
@@ -13,6 +14,17 @@
         <a href="#contact" id="navbarText">Contact</a>
         <img src="/images/fronttext.png" alt="" id="fronttext">
     </div>
+
+    <div align="center" id="container">
+        <form action="/comic">
+            <td>
+                <% for (let i = 0; i < comics.length; i++) { %>
+                    <button value="<%= comics[i].id %>"><img src="<%= comics[i].image %>" alt="" id="storepic"></button>
+                <% } %>
+            </td>
+        </form>
+    </div>
+
     <img src="/images/laflame.gif" alt="" id="flamesofdoom">
     <img src="/images/laflame.gif" alt="" id="flamesofdoom2">
 </body>
