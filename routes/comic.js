@@ -11,7 +11,7 @@ const router = express.Router();
 
 // get register page
 router.get('/', (req, res) => {
-  const comics = read_comics(dbFile);
+  const comic = read_comics(dbFile, req.query.id);
   const title = 'Comics';
   const user = 1;
   let cart_count = read_cart(dbFile, user);
@@ -19,14 +19,15 @@ router.get('/', (req, res) => {
     cart_count = {};
     cart_count.count = 0;
   }
-  res.render('cart', { title, comics, cart_count });
+  res.render('comic', { title, comic, user, cart_count });
 });
+
 
 router.post('/', (req, res) => {
   const comic = req.body.comic;
   const user = 1;
   create_cart(dbFile, user, comic);
-  res.redirect('/cart');
+  res.redirect('/comic');
 });
 
 export { router } ;

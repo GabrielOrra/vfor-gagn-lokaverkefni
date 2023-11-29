@@ -16,16 +16,11 @@ function checkAuth(req, res, next) {
   }
 }
 
-const db = new Database(dbFile);
-const stmt = db.prepare('SELECT * FROM comics');
-const comics = stmt.all();
-
 
 router.get('/', checkAuth, (req, res) => {
   const db = new Database(dbFile);
   const stmt = db.prepare('SELECT * FROM comics');
   const comics = stmt.all();
-  console.log(comics)
   
   res.render('index', {user: req.session.user, comics});
 });

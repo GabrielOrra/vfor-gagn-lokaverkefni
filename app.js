@@ -10,7 +10,7 @@ import { router as registerPageRouter } from './routes/register.js';
 import { router as aboutPageRouter } from './routes/about.js';
 import { router as createPageRouter } from './routes/create_comic.js';
 import { router as deleteCartRouter } from './routes/delete_from_cart.js';
-import { router as cartRouter } from './routes/cart.js';
+import { router as comicRouter } from './routes/comic.js';
 
 const app = express();
 dotenv.config();
@@ -43,7 +43,7 @@ app.use('/register', registerPageRouter);
 app.use('/about', aboutPageRouter);
 app.use('/create_comic', createPageRouter); 
 app.use('/delete_from_cart', deleteCartRouter);
-app.use('/cart', cartRouter);
+app.use('/comic', comicRouter);
 
 
 // errors: page not found

@@ -6,22 +6,22 @@
   <title><%= title %></title>
 </head>
 <body>
-  <h1>User cart: <%= cartCount.count  %></h1>
-  <% for (let comic of comics) { %>
-    <h1><%= comic.name %></h1>
-    <p><%= comic.description %></p>
-    <p><%= comic.price %></p>
-    <p><%= comic.image %></p>
-    <br>
-    <form action="/comics" method="post">
-      <input type="hidden" name="comic" value="<%= comic.id %>">
-      <input type="submit" value="AddToCart">
-    </form>
-    <br>
-    <form action="/delete_from_cart" method="post">
-      <input type="hidden" name="comic" value="<%= comic.id %>">
-      <input type="submit" value="delete_from_cart">
-    </form>
-  <% } %>
+  <h1>User cart: <%= cart_count.count  %></h1>
+  <%= console.log(comic) %>
+  <h1><%= comic.title %></h1>
+  <p><%= comic.summary %></p>
+  <p><%= comic.price %></p>
+  <p><%= comic.image %></p>
+  <br>
+  <form action="/comics" method="post">
+    <input type="hidden" name="comics" value="<%= comic.id %>">
+    <input type="submit" value="AddToCart">
+  </form>
+  <br>
+  <form action="/delete_from_cart" method="post">
+    <input type="hidden" name="comics" value="<%= comic.id %>">
+    <input type="submit" value="delete_from_cart">
+  </form>
+
 </body>
 </html>

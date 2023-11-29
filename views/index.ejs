@@ -16,10 +16,10 @@
     </div>
 
     <div align="center" id="container">
-        <form action="/comic">
+        <form>
             <td>
                 <% for (let i = 0; i < comics.length; i++) { %>
-                    <button value="<%= comics[i].id %>"><img src="<%= comics[i].image %>" alt="" id="storepic"></button>
+                    <a href="/comic?=id<%= comics[i].id %>"><span><img src="<%= comics[i].image %>" alt="" id="storepic"></button></span></a>
                 <% } %>
             </td>
         </form>
