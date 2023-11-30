@@ -19,7 +19,7 @@
         <form>
             <td>
                 <% for (let i = 0; i < comics.length; i++) { %>
-                    <a href="/comic?=id<%= comics[i].id %>"><span><img src="<%= comics[i].image %>" alt="" id="storepic"></button></span></a>
+                    <a href="/comic?id=<%= comics[i].id %>"><img src="<%= comics[i].image %>" alt="" id="storepic"></a>
                 <% } %>
             </td>
         </form>

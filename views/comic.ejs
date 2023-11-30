@@ -7,11 +7,12 @@
 </head>
 <body>
   <h1>User cart: <%= cart_count.count  %></h1>
-  <%= console.log(comic) %>
+
+  <img src="<% comic.image %>" alt="">
   <h1><%= comic.title %></h1>
   <p><%= comic.summary %></p>
   <p><%= comic.price %></p>
-  <p><%= comic.image %></p>
+
   <br>
   <form action="/comics" method="post">
     <input type="hidden" name="comics" value="<%= comic.id %>">
@@ -22,6 +23,7 @@
     <input type="hidden" name="comics" value="<%= comic.id %>">
     <input type="submit" value="delete_from_cart">
   </form>
+
 
 </body>
 </html>
