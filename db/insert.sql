@@ -149,15 +149,12 @@ INSERT INTO characters (name, description) VALUES
 ('Invincible', 'A superhero who is the son of Omni-Man, the most powerful being on Earth'),
 ('Atom Eve', 'A superheroine who can manipulate matter and Invincible''s girlfriend'),
 ('Robot', 'A super-intelligent android who leads the Teen Team, a group of young superheroes'),
-('Homelander', 'The leader of the Seven, a group of corrupt superheroes who work for a corporation called Vought'),
-('Billy Butcher', 'The leader of the Boys, a group of vigilantes who expose and fight against the Seven'),
-('Starlight', 'A superheroine who joins the Seven and becomes disillusioned with their corruption'),
 ('Guts', 'A mercenary who wields a massive sword and seeks revenge against his former friend Griffith'),
 ('Casca', 'A female warrior who was once Guts'' lover and a member of the Band of the Hawk, a mercenary group led by Griffith'),
 ('Griffith', 'The leader of the Band of the Hawk, who sacrificed his comrades to become a demonic godlike being called Femto'),
 ('Yuji Itadori', 'A high school student who becomes the host of Sukuna, a powerful curse'),
 ('Megumi Fushiguro', 'A sorcerer who specializes in summoning shikigami, animal spirits that aid him in battle'),
-('Nobara Kugisaki', 'A sorcerer who uses nails and a hammer as her weapons of choice'),
+('Nobara Kugisaki', 'A sorcerer who uses nails and a hammer as her weapons of choice');
 
 
 /* attack on titan */

@@ -145,3 +145,7 @@ CREATE VIEW seriesInfo AS
     FROM people INNER JOIN comicPeopleRole
     ON people.id = comicPeopleRole.peopleID
     WHERE comicPeopleRole.roleID = 9;
+
+
+
+SELECT image FROM comics;

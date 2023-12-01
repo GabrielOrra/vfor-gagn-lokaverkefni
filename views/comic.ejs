@@ -4,14 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%= title %></title>
+  <link rel="stylesheet" href="/css/comic_template.css">
 </head>
 <body>
   <h1>User cart: <%= cart_count.count  %></h1>
 
-  <img src="<% comic.image %>" alt="">
-  <h1><%= comic.title %></h1>
-  <p><%= comic.summary %></p>
-  <p><%= comic.price %></p>
+  
+  <div id="container">
+    <div id="item1"><img src="<%= comic.image %>" alt=""></div>
+    <div id="item2"><h2><%= comic.summary %></h2></div>
+    <div id="item3"><h1><%= comic.title %></h1></div>
+    <div id="item4"><h1>Price: $<%= comic.price %></h1></div>
+  </div>
+
+
+
+
 
   <br>
   <form action="/comics" method="post">
