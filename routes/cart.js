@@ -11,25 +11,14 @@ const router = express.Router();
 
 
 router.get('/', (req, res) => {
-  const comic = read_comic(dbFile, req.query.id);
-  console.log(comic)
-  const title = 'Comics';
-  const user = 1;
+  const title = 'Cart';
+
   let cart_count = read_cart(dbFile, user);
   if (!cart_count) {
     cart_count = {};
     cart_count.count = 0;
   }
   res.render('comic', { title, comic, user, cart_count });
-});
-
-
-router.post('/', (req, res) => {
-  const comic = req.body.comic;
-  console.log(comic);
-  const user = 1;
-  create_cart(dbFile, user, comic);
-  res.redirect('/');
 });
 
 export { router } ;
