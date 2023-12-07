@@ -1,24 +1,34 @@
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { read_comic } from '../db/read/read_comic_by_id.js';
-import { create_cart } from '../db/create/create_cart.js';
+import { read_comics } from '../db/read/read_comics.js';
 import { read_cart } from '../db/read/read_cart.js';
+import { cart_count } from '../db/read/read_cart_count.js';
+import { create_cart } from '../db/create/create_cart.js';
 
 const dbFile = path.join(fileURLToPath(new URL('.', import.meta.url)), '../db/comics.db');
 
 const router = express.Router();
 
-
+// get register page
 router.get('/', (req, res) => {
-  const title = 'Cart';
+  const comics = read_comics(dbFile);
+  const title = 'comics';
 
-  let cart_count = read_cart(dbFile, user);
-  if (!cart_count) {
-    cart_count = {};
-    cart_count.count = 0;
+  let user = '';
+	let isLoggedIn = false;
+	if (req.session.isLoggedIn) {
+	  user = req.session.user;
+	  isLoggedIn = true;
+	}
+
+  let cartCount = cart_count(dbFile, user);
+  if (!cartCount) {
+    cartCount = {};
+    cartCount.count = 0;
   }
-  res.render('comic', { title, comic, user, cart_count });
+  res.render('cart', { title, comics, cartCount });
 });
+
 
 export { router } ;

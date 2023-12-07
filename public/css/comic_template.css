@@ -60,3 +60,8 @@ img {
     grid-area: footer;
   }
 
+
+#create_delete_cart {
+  text-align: center;
+}
+

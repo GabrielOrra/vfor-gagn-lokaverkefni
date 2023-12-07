@@ -15,8 +15,10 @@ router.get('/', (req, res) => {
 // post delete page
 router.post('/', (req, res) => {
   const user = 1;
+  console.log(req.body.comic);
+
   delete_from_cart(dbFile, user, req.body.comic);
-  res.redirect('/cart');
+  res.redirect('/');
 });
 
 export { router } ;

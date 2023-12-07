@@ -2,7 +2,7 @@ DROP TABLE comics;
 DROP TABLE comic_character;
 DROP TABLE series;
 
-
+DROP TABLE cart;
 
 DROP TABLE genres;
 

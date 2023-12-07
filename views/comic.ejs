@@ -20,14 +20,14 @@
 
 
   <br>
-  <form action="/comic" method="post">
+  <form action="/comic" method="post" id="create_delete_cart">
     <input type="hidden" name="comic" value="<%= comic.id %>">
-    <input type="submit" value="AddToCart">
+    <input type="submit" value="Add to cart">
   </form>
   <br>
-  <form action="/delete_from_cart" method="post">
+  <form action="/delete_from_cart" method="post" id="create_delete_cart">
     <input type="hidden" name="comic" value="<%= comic.id %>">
-    <input type="submit" value="delete_from_cart">
+    <input type="submit" value="Remove from cart">
   </form>
 
 

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+    <h1>YOUR CART:</h1>
+    <% for( let i = 0; i < cart.length; i++ ) { %>
+        <table>
+            <tr>
+                <td><div id="item01"><img src="<%= cart[i].image %>" alt=""></div></td>
+                <td><div id="item02"><p>Title:<%= cart[i].title %></p></div></td>
+                <td><div id="item03"><p>Price:<%= cart[i].price %></p></div></td>
+            </tr>
+        </table>
+    <% } %>
+</body>
+</html>
